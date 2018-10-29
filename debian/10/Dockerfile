@@ -7,13 +7,12 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
     && apt-get install -y systemd python python-pip sudo bash \
                           ca-certificates apt-transport-https \
-                          curl cron locales lsb-release \
-                          openssh-server tzdata git \
+                          curl cron locales lsb-release git \
+                          openssh-server tzdata rsyslog \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir -p /run/sshd
-
 
 RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /etc/systemd/system/*.wants/* \
