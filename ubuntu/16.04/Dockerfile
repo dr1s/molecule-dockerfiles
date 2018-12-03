@@ -12,7 +12,7 @@ RUN apt-get update \
                           curl cron locales lsb-release git \
                           openssh-server tzdata rsyslog \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip
 
 RUN mkdir -p /run/sshd
