@@ -13,6 +13,7 @@ RUN apt-get update \
                           openssh-server tzdata rsyslog \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    && pip install --upgrade pip
 
 RUN mkdir -p /run/sshd
 
