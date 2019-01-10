@@ -1,4 +1,4 @@
 build:
-	docker build -t dr1s/molecule-ubuntu:16.04 .
+	docker build -t dr1s/molecule-ubuntu:18.04 .
 push:
-	docker push dr1s/molecule-ubuntu:16.04
+	docker push dr1s/molecule-ubuntu:18.04
