@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get install -y systemd python python-pip sudo bash \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
-                          openssh-server tzdata rsyslog \
+                          openssh-server tzdata rsyslog python-apt \
 			  iproute2 net-tools \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \

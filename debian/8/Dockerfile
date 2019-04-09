@@ -9,7 +9,7 @@ RUN apt-get update \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
                           openssh-server tzdata rsyslog \
-                          python-dev \
+                          python-dev python-apt\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip
