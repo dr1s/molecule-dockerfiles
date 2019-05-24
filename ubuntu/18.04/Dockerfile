@@ -11,7 +11,7 @@ RUN apt-get update \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
                           openssh-server tzdata rsyslog python-apt \
-			  iproute2 net-tools \
+			                    iproute2 net-tools iputils-ping \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip
