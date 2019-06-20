@@ -4,7 +4,7 @@ ENV container docker
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update \
+RUN apt-get update && apt-get -y upgrade \
     && apt-get install -y systemd python python-pip sudo bash \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
