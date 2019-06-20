@@ -1,4 +1,4 @@
-FROM debian:jessie-backports
+FROM debian:jessie
 
 ENV container docker
 ENV LC_ALL C
@@ -9,7 +9,7 @@ RUN apt-get update \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
                           openssh-server tzdata rsyslog \
-                          python-dev python-apt\
+                          python-dev python-apt \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip
