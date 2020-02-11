@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -y upgrade \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && pip install --upgrade pip
 
-RUN mkdir -p /run/sshd
+RUN mkdir -p /run/sshd /var/run/dbus
 
 RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /etc/systemd/system/*.wants/* \
