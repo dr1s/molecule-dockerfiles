@@ -7,15 +7,15 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN sed -i 's/# deb/deb/g' /etc/apt/sources.list
 
 RUN apt-get update && apt-get -y upgrade \
-    && apt-get install -y systemd python2 python-pip sudo bash \
+    && apt-get install -y systemd python2 python3 python3-pip sudo bash \
                           ca-certificates apt-transport-https \
                           curl cron locales lsb-release git \
                           openssh-server tzdata rsyslog dbus \
                           python2-dev python-apt iputils-ping \
-                          iproute2 net-tools \
+                          iproute2 net-tools python3-apt \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
-    && pip install --upgrade pip
+    && pip3 install --upgrade pip
 
 RUN mkdir -p /run/sshd
 
